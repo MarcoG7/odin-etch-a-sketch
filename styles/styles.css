@@ -9,6 +9,15 @@ body {
 h1 {
     font-size: 48px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 0px;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+
+    font-size: 18px;
 }
 
 #container {
