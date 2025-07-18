@@ -16,6 +16,19 @@ function createCell() {
     cell.style = `--CELL_DIMENSION: ${CELL_DIMENSION}`
     cell.classList.add("cell");
 
+    cell.addEventListener("mouseenter", addColor);
+    cell.addEventListener("mouseleave", removeColor);
+
+    function addColor() {
+        cell.style.backgroundColor = "gray";
+    }
+
+    function removeColor() {
+        setTimeout(() => {
+            cell.style.backgroundColor = "white";
+        }, 300);
+    }
+
     return cell;
 }
 
