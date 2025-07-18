@@ -3,10 +3,8 @@ const GRID_DIMENSION = 16;
 
 
 const container = document.querySelector("#container");
-
 container.style.display = "flex";
 
-let grid = [];
 
 function createColumn() {
     let column = document.createElement("div");
