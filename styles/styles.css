@@ -1,6 +1,14 @@
+body {
+    background-color: mintcream;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #container {
     display: flex;
-    
+
     width: 960px;
     
     border: 5px dotted blue;
