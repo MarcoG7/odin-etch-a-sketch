@@ -6,6 +6,11 @@ body {
     align-items: center;
 }
 
+h1 {
+    font-size: 48px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 #container {
     display: flex;
 
