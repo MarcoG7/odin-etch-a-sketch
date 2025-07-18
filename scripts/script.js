@@ -35,6 +35,8 @@ function createCell() {
     cell.addEventListener("mouseenter", addColor);
     cell.addEventListener("mouseleave", removeColor);
 
+    let opacityIntervalId;
+
     function addColor() {
         // Random color in range (0-255): Math.floor(Math.random() * (max - min + 1)) + min;
         const colorR = Math.floor(Math.random() * (256));
@@ -42,10 +44,23 @@ function createCell() {
         const colorB = Math.floor(Math.random() * (256));
         console.log(`>>> ${colorR}, ${colorG}, ${colorB}`)
         cell.style.backgroundColor = `rgb(${colorR}, ${colorG}, ${colorB})`;
+
+        cell.style.opacity = 0.2;
+        let opacity = 1;
+        opacityIntervalId = setInterval(() => {
+            if (opacity >= 10) {
+                clearInterval();
+            } else {
+                opacity++;
+                cell.style.opacity = opacity / 10;
+            }
+        }, 5);
     }
 
     function removeColor() {
+        clearInterval(opacityIntervalId);
         setTimeout(() => {
+            cell.style.opacity = 1;
             cell.style.backgroundColor = "white";
         }, 300);
     }
