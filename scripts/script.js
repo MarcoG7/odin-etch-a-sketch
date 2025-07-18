@@ -1,4 +1,5 @@
 const CELL_DIMENSION = "50px";
+const GRID_DIMENSION = 16;
 
 
 const container = document.querySelector("#container");
