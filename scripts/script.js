@@ -1,19 +1,19 @@
-const CELL_DIMENSION = "50px";
-const GRID_DIMENSION = 16;
+const GRID_WIDTH = 960;  // in pixels (px)
+let grid_dimensions = 16; // number of cells
 
 
 const container = document.querySelector("#container");
 
 const newGridButton = document.querySelector("#new-grid");
 newGridButton.addEventListener("click", () => {
-    let new_size = 0;
+    grid_dimensions = 0;
     
     do {
-        new_size = +prompt("Size of new grid (1-100): ");
-    } while (new_size > 100 || new_size < 1);
+        grid_dimensions = +prompt("Size of new grid (1-100): ");
+    } while (grid_dimensions > 100 || grid_dimensions < 1);
     
     container.replaceChildren();
-    drawGrid(new_size);
+    drawGrid(grid_dimensions);
 });
 
 
@@ -25,7 +25,9 @@ function createColumn() {
 
 function createCell() {
     let cell = document.createElement("div");
-    cell.style = `--CELL_DIMENSION: ${CELL_DIMENSION}`
+    const cell_dimension = `${GRID_WIDTH / grid_dimensions}px`;
+    cell.style = `--cell_dimension: ${cell_dimension}`
+
     cell.classList.add("cell");
 
     cell.addEventListener("mouseenter", addColor);
@@ -55,4 +57,4 @@ function drawGrid(size) {
     }
 }
 
-drawGrid(GRID_DIMENSION);
+drawGrid(grid_dimensions);
