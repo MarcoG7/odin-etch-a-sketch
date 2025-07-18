@@ -3,7 +3,8 @@ let grid_dimensions = 16; // number of cells
 
 
 const container = document.querySelector("#container");
-container.style = `--container_width: ${GRID_WIDTH}`;
+const grid_width_px = `${GRID_WIDTH}px`;
+container.style = `--container_width: ${grid_width_px}`;
 
 const newGridButton = document.querySelector("#new-grid");
 newGridButton.addEventListener("click", () => {
