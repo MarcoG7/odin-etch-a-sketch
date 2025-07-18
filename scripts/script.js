@@ -1,4 +1,4 @@
-const GRID_WIDTH = 960;  // in pixels (px)
+const GRID_WIDTH = 700;  // in pixels (px)
 let grid_dimensions = 16; // number of cells
 
 
