@@ -24,3 +24,14 @@ function createCell() {
 
     return cell;
 }
+
+function drawGrid(size) {
+    for (let i = 0; i < size; i++) {
+        let column = createColumn();
+        for (let j = 0; j < size; j++) {
+            let cell = createCell();
+            column.appendChild(cell);
+        }
+        container.appendChild(column);
+    }
+}
