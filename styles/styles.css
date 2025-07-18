@@ -1,0 +1,14 @@
+#container {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.cell {
+    border: 1px solid black;
+    width: var(--CELL_DIMENSION);
+    height: var(--CELL_DIMENSION);
+}

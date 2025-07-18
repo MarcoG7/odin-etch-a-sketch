@@ -3,22 +3,18 @@ const GRID_DIMENSION = 16;
 
 
 const container = document.querySelector("#container");
-container.style.display = "flex";
 
 
 function createColumn() {
     let column = document.createElement("div");
-    column.style.display = "flex";
-    column.style.flexDirection = "column";
-
+    column.classList.add("column");
     return column;
 }
 
 function createCell() {
     let cell = document.createElement("div");
-    cell.style.width = CELL_DIMENSION;
-    cell.style.height = CELL_DIMENSION;
-    cell.style.border = "1px solid black";
+    cell.style = `--CELL_DIMENSION: ${CELL_DIMENSION}`
+    cell.classList.add("cell");
 
     return cell;
 }
