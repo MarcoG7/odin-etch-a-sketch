@@ -4,6 +4,18 @@ const GRID_DIMENSION = 16;
 
 const container = document.querySelector("#container");
 
+const newGridButton = document.querySelector("#new-grid");
+newGridButton.addEventListener("click", () => {
+    let new_size = 0;
+    
+    do {
+        new_size = +prompt("Size of new grid (1-100): ");
+    } while (new_size > 100 || new_size < 1);
+    
+    container.replaceChildren();
+    drawGrid(new_size);
+});
+
 
 function createColumn() {
     let column = document.createElement("div");
