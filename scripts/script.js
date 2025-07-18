@@ -1,5 +1,5 @@
 const container = document.querySelector("#container");
 
-container.style["display"] = "flex";
+container.style.display = "flex";
 
 let grid = [];
