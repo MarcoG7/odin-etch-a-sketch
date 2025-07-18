@@ -33,3 +33,5 @@ function drawGrid(size) {
         container.appendChild(column);
     }
 }
+
+drawGrid(GRID_DIMENSION);
