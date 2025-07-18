@@ -36,7 +36,12 @@ function createCell() {
     cell.addEventListener("mouseleave", removeColor);
 
     function addColor() {
-        cell.style.backgroundColor = "gray";
+        // Random color in range (0-255): Math.floor(Math.random() * (max - min + 1)) + min;
+        const colorR = Math.floor(Math.random() * (256));
+        const colorG = Math.floor(Math.random() * (256));
+        const colorB = Math.floor(Math.random() * (256));
+        console.log(`>>> ${colorR}, ${colorG}, ${colorB}`)
+        cell.style.backgroundColor = `rgb(${colorR}, ${colorG}, ${colorB})`;
     }
 
     function removeColor() {
