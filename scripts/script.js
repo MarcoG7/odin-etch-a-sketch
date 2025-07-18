@@ -11,3 +11,12 @@ function createColumn() {
 
     return column;
 }
+
+function createCell() {
+    let cell = document.createElement("div");
+    cell.style.width = "50px";
+    cell.style.height = "50px";
+    cell.style.border = "1px solid black";
+
+    return cell;
+}
